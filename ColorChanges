@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Changes on click</title>
+	<link rel="stylesheet" type="text/css "href="main.css">
+</head>
+<body>
+	<input type="button" class="buttonprop" onclick="listen()" value="Click Here to change color"></input>
+	<script src="script.js"></script>
+</body>
+</html>
+
+body
+{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.buttonprop
+{
+	padding: 10px;
+	color: red;
+	border: 3px solid red;
+	background: rgba(0,0,0,0.6);
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	cursor: pointer;
+	outline: none;
+}
+
+const var1=document.querySelector("body");
+const randcolors=["yellow","green","blue","pink"];
+function listen() {
+	let randno = Math.floor(Math.random()*randcolors.length);
+	var1.style.backgroundColor=randcolors[randno];
+}
